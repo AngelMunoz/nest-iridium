@@ -7,11 +7,9 @@ export class DatabaseConfig extends IridiumDatabaseConfig {
 
   getConfiguration(): Configuration {
     return {
-      database: '',
-      host: '',
-      port: 0,
-      username: '',
-      password: '',
+      host: 'localhost',
+      port: 27017,
+      database: 'iridium-test',
       options: {
         autoReconnect: true
       }
