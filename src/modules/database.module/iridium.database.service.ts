@@ -12,13 +12,17 @@ export class IridiumDatabaseService {
 
   constructor(private readonly databaseConfig: IridiumDatabaseConfig) {
     if (!this._db) {
-      this._db = new Database(this.databaseConfig);
+      this.database();
     }
   }
 
-  public get database(): Database {
+  public async database(): Promise<Database> {
     if (!this._db) {
-      this._db = new Database(this.databaseConfig);
+      try {
+        this._db = new Database(this.databaseConfig);
+      } catch (error) {
+        console.error("Error While Getting to the DB", error)
+      }
     }
     return this._db
   }

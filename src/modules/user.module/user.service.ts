@@ -12,8 +12,7 @@ export class UserService implements IService<User> {
 
   private _database: Database;
   constructor(private readonly DatabaseService: IridiumDatabaseService) {
-    this._database = this.DatabaseService.database;
-    this.seed();
+    this.ConnectToDb();
   }
 
   async find(conditions?: { [property: string]: number }, fields?: { [name: string]: number }): Promise<User[]> {
@@ -48,6 +47,15 @@ export class UserService implements IService<User> {
     const removedCount = await this._database.Users.remove(conditions, options);
     this._database.close();
     return removedCount;
+  }
+
+  private async ConnectToDb() {
+    try {
+      this._database = await this.DatabaseService.database();
+      await this.seed();
+    } catch (error) {
+      return console.log(error);
+    }
   }
 
   private async seed() {
