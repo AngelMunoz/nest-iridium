@@ -1,7 +1,7 @@
 {
-  "name": "nest-typescript-starter",
+  "name": "nest-iridium-starter",
   "version": "1.0.0",
-  "description": "Nest TypeScript starter repository",
+  "description": "Nestjs + Typescript + Iridium Starter",
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
@@ -9,21 +9,21 @@
     "start:prod": "node dist/server.js"
   },
   "dependencies": {
-    "@nestjs/common": "^3.0.0",
-    "@nestjs/core": "^3.0.1",
-    "@nestjs/microservices": "^3.0.1",
-    "@nestjs/testing": "^3.0.0",
-    "@nestjs/websockets": "^3.0.0",
-    "bluebird": "^3.5.0",
-    "body-parser": "^1.17.2",
-    "iridium": "^7.2.5",
-    "redis": "^2.7.1",
-    "reflect-metadata": "^0.1.10",
-    "rxjs": "^5.4.2"
+    "@nestjs/common": "4.1.0",
+    "@nestjs/core": "4.1.0",
+    "@nestjs/microservices": "4.1.0",
+    "@nestjs/testing": "4.1.0",
+    "@nestjs/websockets": "4.1.0",
+    "bluebird": "3.5.1",
+    "body-parser": "1.18.2",
+    "iridium": "7.2.5",
+    "redis": "2.8.0",
+    "reflect-metadata": "0.1.10",
+    "rxjs": "5.4.3"
   },
   "devDependencies": {
-    "typescript": "^2.4.1",
-    "@types/node": "^7.0.5",
-    "ts-node": "^3.2.0"
+    "typescript": "2.5.3",
+    "@types/node": "8.0.33",
+    "ts-node": "3.3.0"
   }
 }
